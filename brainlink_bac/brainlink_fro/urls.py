@@ -10,6 +10,7 @@ from .views import (
     AnnouncementListCreateView, AnnouncementRetrieveUpdateDestroyView
 )
 
+
 urlpatterns = [
     # Department URLs
     path('departments/', DepartmentListCreateView.as_view(), name='department-list'),
