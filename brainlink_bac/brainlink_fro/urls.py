@@ -7,7 +7,9 @@ from .views import (
     EnrollmentListCreateView, EnrollmentRetrieveUpdateDestroyView,
     AssignmentListCreateView, AssignmentRetrieveUpdateDestroyView,
     SubmissionListCreateView, SubmissionRetrieveUpdateDestroyView,
-    AnnouncementListCreateView, AnnouncementRetrieveUpdateDestroyView
+    AnnouncementListCreateView, AnnouncementRetrieveUpdateDestroyView,
+    StudentLoginView, InstructorLoginView, AdministratorListCreateView,
+    AdministratorLoginView
 )
 
 
@@ -43,4 +45,13 @@ urlpatterns = [
     # Announcement URLs
     path('announcements/', AnnouncementListCreateView.as_view(), name='announcement-list'),
     path('announcements/<int:pk>/', AnnouncementRetrieveUpdateDestroyView.as_view(), name='announcement-detail'),
+
+
+    # Login
+    path('student-login/', StudentLoginView.as_view(), name='student-login'),
+    path('instructor-login/', InstructorLoginView.as_view(), name='instructor-login'),
+
+    #  Administrator
+    path('administrator/', AdministratorListCreateView.as_view(), name='administratort-list'),
+    path('administrator-login/', AdministratorLoginView.as_view(), name='administratort-login'),
 ]

@@ -13,12 +13,13 @@ class Instructor(models.Model):
     department=models.ForeignKey(Department, on_delete=models.CASCADE)
     email=models.EmailField()
     contact_number=models.CharField(max_length=20)
+    password = models.CharField(max_length=100,default='') 
 
     def __str__(self):
         return self.name
     
 class Course(models.Model):
-    course_code = models.CharField(max_length=10)
+    course_code = models.CharField(max_length=11)
     course_name = models.CharField(max_length=200)
     department = models.ForeignKey(Department, on_delete=models.CASCADE)
     credits = models.PositiveIntegerField()
@@ -34,6 +35,7 @@ class Student(models.Model):
     major = models.CharField(max_length=100)
     email = models.EmailField()
     contact_number = models.CharField(max_length=20)
+    password = models.CharField(max_length=100,default='')
 
     def __str__(self):
         return self.name
@@ -66,3 +68,28 @@ class Announcement(models.Model):
     publish_date = models.DateField()
     department = models.ForeignKey(Department, on_delete=models.CASCADE, null=True)
     course = models.ForeignKey(Course, on_delete=models.CASCADE, null=True)
+
+
+
+class LoginStudent(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)
+
+class LoginInstructor(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)
+
+
+class LoginAdministrator(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)
+
+
+
+class Administrator(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=100)

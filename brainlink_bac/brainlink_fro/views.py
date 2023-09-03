@@ -1,9 +1,13 @@
-from rest_framework import generics
-from .models import Department, Instructor, Course, Student, Enrollment, Assignment, Submission, Announcement
+
+from rest_framework import generics, status
+from rest_framework.response import Response
+from .models import Department, Instructor, Course, Student, Enrollment, Assignment, Submission, Announcement,LoginStudent, LoginInstructor, Administrator
 from .serializers import (
     DepartmentSerializer, InstructorSerializer, CourseSerializer,
     StudentSerializer, EnrollmentSerializer, AssignmentSerializer,
-    SubmissionSerializer, AnnouncementSerializer
+    SubmissionSerializer, AnnouncementSerializer, StudentLoginSerializer,
+    InstructorLoginSerializer, AdministratorSerializer, AdministratorLoginSerializer
+
 )
 
 # Department Views
@@ -77,4 +81,55 @@ class AnnouncementListCreateView(generics.ListCreateAPIView):
 class AnnouncementRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Announcement.objects.all()
     serializer_class = AnnouncementSerializer
+
+
+
+class AdministratorListCreateView(generics.ListCreateAPIView):
+    queryset = Administrator.objects.all()
+    serializer_class = AdministratorSerializer
+
+    
+
+class StudentLoginView(generics.CreateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentLoginSerializer
+
+    def create(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        try:
+            student = Student.objects.get(email=email, password=password)
+            return Response({'message': 'Login successful'}, status=status.HTTP_200_OK)
+        except Student.DoesNotExist:
+            return Response({'message': 'Login failed'}, status=status.HTTP_401_UNAUTHORIZED)
+
+class InstructorLoginView(generics.CreateAPIView):
+    queryset = Instructor.objects.all()
+    serializer_class = InstructorLoginSerializer
+
+    def create(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        try:
+            instructor = Instructor.objects.get(email=email, password=password)
+            return Response({'message': 'Login successful'}, status=status.HTTP_200_OK)
+        except Instructor.DoesNotExist:
+            return Response({'message': 'Login failed'}, status=status.HTTP_401_UNAUTHORIZED)
+        
+
+class AdministratorLoginView(generics.CreateAPIView):
+    queryset = Administrator.objects.all()
+    serializer_class = AdministratorLoginSerializer
+
+    def create(self, request, *args, **kwargs):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        
+        try:
+            administrator = Administrator.objects.get(email=email, password=password)
+            return Response({'message': 'Login successful'}, status=status.HTTP_200_OK)
+        except Instructor.DoesNotExist:
+            return Response({'message': 'Login failed'}, status=status.HTTP_401_UNAUTHORIZED)
+
+
 
