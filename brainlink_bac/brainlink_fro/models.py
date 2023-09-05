@@ -49,6 +49,7 @@ class Assignment(models.Model):
     description = models.TextField()
     due_date = models.DateField()
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
+    assignmentsub = models.CharField(max_length=100,default='')
 
 class Submission(models.Model):
     submission_date = models.DateField()
