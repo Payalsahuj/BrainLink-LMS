@@ -1,0 +1,17 @@
+<app-stunavbar></app-stunavbar>
+<div id="maindiv">
+    <h1 style="margin-left: 2.5%; color: rgba(12, 125, 218, 0.756);">Assignments</h1>
+    <div id="container">
+        <div *ngFor="let assignment of assignmentData" class="card" (click)="goToAssignment(assignment.id)">
+            <div >
+              <h2 class="card-title">{{ assignment.title }}</h2>
+              <p class="due-date">Due Date: {{ assignment.due_date }}</p>
+            </div>
+            <div>
+                <button [style.background-color]="assignment.assignmentsub === '' ? 'red' : 'green'" style="color: white; padding: 5px 10px; border: 2px solid transparent;">
+                    {{ assignment.assignmentsub === '' ? 'Pending' : 'Completed' }}
+                  </button>
+            </div>  
+          </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+#maindiv{
+    margin-top: 8%;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+#button{
+    padding: 0.7% 2%; width: 20%; background-color: rgba(12, 125, 218, 0.756);
+            color: white; border: 2px solid rgba(12, 125, 218, 0.756);
+            font-size: 17px;
+            border-radius: 10px;
+}
+#button:hover{
+    cursor: pointer;
+}

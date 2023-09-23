@@ -1,0 +1,14 @@
+<app-stunavbar></app-stunavbar>
+<div id="maindiv">
+    <h1 style="margin-left: 2.5%; color: rgba(12, 125, 218, 0.756);">Enrolled courses</h1>
+    <div id="container">
+    <div class="course-card" *ngFor="let course of courses">
+        <h2 style="color: rgba(12, 125, 218, 0.756);">{{ course.course_name }}  <span style="color: orange;">{{course.course_code}}</span></h2>
+        
+        <p>{{ course.description }}</p>
+        <!-- Add other course details here -->
+      </div>
+    </div>
+</div>
+
+  

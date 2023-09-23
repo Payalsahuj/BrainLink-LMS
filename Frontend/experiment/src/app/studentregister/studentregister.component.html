@@ -1,0 +1,48 @@
+
+  <div >
+    <form [formGroup]="studentForm" (ngSubmit)="saveStudent()">
+    <div class="input">
+      <label>Username</label>
+      <input type="text" formControlName="name" required placeholder="Enter username">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Email</label>
+      <input type="email" formControlName="email" required placeholder="Enter Email Account">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Enter Password</label>
+      <input type="password" formControlName="password" required placeholder="Enter Password">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Contact No.</label>
+      <input type="number" formControlName="contact_number" required placeholder="Add Contact Number">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Date of Birth</label>
+      <input type="date" required placeholder="Enter DOB" formControlName="dob">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Major</label>
+      <input type="text" formControlName="major" required placeholder="Major in which subject">
+    </div>
+    <br/>
+    <div class="input">
+      <label>Gender</label>
+      <select formControlName="gender">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+      </select>
+    </div>
+    <br/>
+    <div class="input">
+      <button type="submit" ><b>Registere you details ></b></button>
+    </div>
+  </form>
+  </div>
+

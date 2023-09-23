@@ -1,0 +1,43 @@
+/* navbar.component.css */
+.navbar {
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    background-color: rgba(89, 174, 244, 0.386);
+    width: 100%;
+  }
+.navbar-brand{
+  text-decoration: none;
+  font-family: cursive;
+}
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .container a{
+    text-decoration: none;
+   color: rgb(12, 125, 218);
+   font-size: 17px;
+   font-family: serif;
+  }
+
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+  
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+  
+  #anchortag{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   width: 40%;
+    gap: 5%;
+  }
+
+  

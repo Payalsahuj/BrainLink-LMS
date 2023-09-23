@@ -1,0 +1,19 @@
+#maincontainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 6%;
+    text-align: left;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2%;
+    border-radius: 10px;
+}

@@ -1,0 +1,38 @@
+<div id="container">
+    <div id="register">
+      <h2>Login to BrainLink . .</h2>
+      <br/>
+      <div id="split">
+      <div class="first">
+        <img src="https://cdni.iconscout.com/illustration/premium/thumb/user-profile-3465537-2928727.png" alt="">
+      </div>
+      <div class="second">
+        <br/>
+      <div class="input">
+        <label>Email</label>
+        <input type="text" placeholder="Enter email" [(ngModel)]="email">
+      </div>
+      <br/>
+      <div class="input">
+        <label>Password</label>
+        <input type="password" placeholder="Enter password" [(ngModel)]="password">
+      </div>
+      <br/>
+      <div class="input">
+        <label>Role</label>
+        <select name="role" id="role" [(ngModel)]="role">
+          <option value="">Select Role</option>
+          <option value="Student">Student</option>
+          <option value="Instructor">Instructor</option>
+          <option value="Administrator">Administrator</option>
+        </select>
+      </div>
+      <br/>
+      <br/>
+      <div class="input">
+        <button (click)="login()"><b>Login</b></button>
+      </div>
+    </div>
+</div>
+    </div>
+</div>

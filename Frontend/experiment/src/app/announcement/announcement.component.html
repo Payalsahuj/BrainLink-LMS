@@ -1,0 +1,11 @@
+<app-stunavbar></app-stunavbar>
+<div id="maindiv">
+  <div id="container">
+    <h1 style="margin-left: 1%; color: rgba(12, 125, 218, 0.756);">Announcements</h1>
+    <div id="card" *ngFor="let announcement of announcementData">
+        <h2 style="color: orange;">{{ announcement.title }}</h2>
+        <p>{{ announcement.description }}</p>
+        <p>Publish Date: {{ announcement.publish_date }}</p>
+      </div>
+    </div>
+</div>

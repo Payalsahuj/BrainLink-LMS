@@ -1,0 +1,29 @@
+<app-instructornavbar></app-instructornavbar>
+<div id="maincontainer">
+    <h2 style="padding: 0.5% 0%; padding-left: 10px; width: 89%; margin: auto; color: rgba(12, 125, 218, 0.756); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 7px;">Student Details</h2>
+    <br/>
+    <div class="container">
+        <table class="table" style="border: 2px solid gray;">
+            <thead >
+                <tr >
+                    <th style="border: 2px solid gray; padding: 1%;">Student ID</th>
+                    <th style="border: 2px solid gray; padding: 1%;">Name</th>
+                    <th style="border: 2px solid gray; padding: 1%;">Email</th>
+                    <th style="border: 2px solid gray; padding: 1%;">Date of Birth</th>
+                    <th style="border: 2px solid gray; padding: 1%;">Major</th>
+                    <th style="border: 2px solid gray; padding: 1%;">Contact</th>
+                </tr>
+            </thead>
+            <tbody >
+                <tr  *ngFor="let student of students">
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.id }}</td>
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.name }}</td>
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.email }}</td>
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.dob}}</td>
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.major }}</td>
+                    <td style="border: 2px solid gray; padding: 1%;">{{ student.contact_number }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

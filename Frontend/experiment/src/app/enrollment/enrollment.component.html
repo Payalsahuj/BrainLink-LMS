@@ -1,0 +1,29 @@
+<app-navbar></app-navbar>
+<div id="maincontainer">
+    <div id="container">
+        <div style="width: 40%; padding: 5%;">
+            <!-- Your course content here -->
+            <img style="width: 100%;" src="https://bloximages.newyork1.vip.townnews.com/thecomanchechief.com/content/tncms/assets/v3/editorial/a/17/a17adc5a-1cfe-11ea-9dfe-6bf3075456f2/5df26e741a6dc.image.png?resize=400%2C240" alt="">
+            <p style="text-align: justify; color: #00838F; font-family: sans-serif; font-size: 18px;">Enrolling in a course is not merely a step in one's educational journey; it's an empowering choice towards personal and professional growth. It's an opportunity to delve into a world of knowledge, expand horizons, and acquire new skills. With each enrollment, you embark on a path of self-discovery, where challenges become stepping stones, and curiosity becomes your compass. It's a chance to connect with passionate educators, like-minded peers, and a diverse community of learners. Whether you seek to master a subject, enhance your career prospects, or simply explore a newfound interest, enrolling in a course is a transformative decision that opens doors to endless possibilities. Embrace the joy of learning, ignite your potential, and enroll today in a course that resonates with your aspirations.</p>
+        </div>
+        <div style="width: 50%;">
+            <div style="display: flex; flex-direction: column;">
+                <h1 style="color: #00838F;">Student details</h1>
+                <app-studentregister></app-studentregister>
+            </div>
+
+            <div style="display: flex; flex-direction: column;">
+                <h1 style="color: #00838F;">Enroll To Our Course</h1>
+                
+                <label>Select your course</label>
+                <select class="input"  name="" id="courseSelect">
+                    <option value="">Select Course</option>
+                    <option *ngFor="let course of courses" [value]="course.course_name">{{ course.course_name }}</option>
+                </select>
+                <br/>
+                <button (click)="enrollCourses()">Enroll Courses</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

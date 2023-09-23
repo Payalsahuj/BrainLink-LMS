@@ -1,0 +1,43 @@
+#maincontainer{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 6%;
+    text-align: left;
+}
+
+.container{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2%;
+    border-radius: 10px;
+}
+.card{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 2%;  
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+.card button:hover{
+    cursor: pointer;
+}
+
+.input{
+    padding: 0.5% 1%;
+    border-radius: 6px;
+    border: 1px solid gray;
+}
+
+#addbutton{
+    background-color: rgba(12, 125, 218, 0.756); color: white; border: 2px solid rgba(12, 125, 218, 0.756); padding: 0.8% 1%; border-radius: 6px;
+}
+
+#addbutton:hover{
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+
+.input{
+    display: flex;
+    flex-direction: column;
+}
+.input input{
+    padding: 1% 1%;
+}
+.input select{
+    padding: 2% 2%;
+}
+.input button{
+    padding: 1.5%;
+    
+    background-color: rgba(12, 125, 218, 0.756);
+    color: white;
+    border: 2px solid rgba(12, 125, 218, 0.756);
+    border-radius: 7px;
+}
+.input button:hover{
+    cursor: pointer;
+    
+}

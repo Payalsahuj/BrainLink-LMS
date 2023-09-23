@@ -1,0 +1,41 @@
+<app-instructornavbar></app-instructornavbar>
+<div id="maincontainer">
+    <h2 style="padding: 0.5% 0%; padding-left: 10px; width: 89%; margin: auto; color: rgba(12, 125, 218, 0.756); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 7px;">  Add Assignments</h2>
+    <br/>
+  <div class="container">
+    <label for="assignmentTitle">Title of Assignment</label>
+    <input type="text" id="assignmentTitle" class="input" [(ngModel)]="assignmentTitle" placeholder="Enter assignment title . . .">
+    <br/>
+    
+    <label for="assignmentDetails">Assignment Description</label>
+    <textarea style="height: 350px;" id="assignmentDetails" class="input" [(ngModel)]="assignmentDetails" placeholder="Describe assignment details . . ."></textarea>
+    <br/>
+    <label for="dueDate">Due Date</label>
+    <input type="date" id="dueDate" class="input" [(ngModel)]="dueDate" placeholder="Set Due Date">
+    <br/>
+    <label for="courseSelect">Add Course</label>
+    <select class="input" [(ngModel)]="selectedCourse">
+      <option value="">Select course</option>
+      <option *ngFor="let course of courses" [value]="course.id">{{ course.course_name }}</option>
+    </select>
+    <br/>
+    <button (click)="addAssignment(selectedCourse)" id="addbutton"><b>Add Assignment</b></button>
+  </div>
+  <br/>
+  <br/>
+  <div class="container">
+    <h2>Assignment list</h2>
+    
+    <div class="card" style="display: flex; flex-direction: row; justify-content: space-between;" *ngFor="let assignment of assignmentList">
+        <div>
+            <h3><b>{{ assignment.title }}</b></h3>
+            <p><strong>Due Date:</strong> {{ assignment.due_date }}</p>
+        </div>
+       <div style="display: flex; justify-content: center; align-items: center;">
+        <button (click)="navigateToUpdateDelete(assignment.id)" style="border-radius: 5px; background-color: green; color: white; padding: 5px 10px; ">Update / Delete</button>
+       </div>
+        
+    </div>
+    
+  </div>
+</div>

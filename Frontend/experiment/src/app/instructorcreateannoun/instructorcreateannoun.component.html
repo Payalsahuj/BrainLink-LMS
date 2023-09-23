@@ -1,0 +1,29 @@
+<app-instructornavbar></app-instructornavbar>
+<div id="maincontainer">
+  <h2 style="padding: 0.5% 0%; padding-left: 10px; width: 89%; margin: auto; color: rgba(12, 125, 218, 0.756); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; border-radius: 7px;">Add Announcements</h2>
+  <br/>
+  <div class="container">
+    <label for="title">Title of Announcement</label>
+    <input type="text" class="input" [(ngModel)]="title" id="title" placeholder="Enter announcement title . . .">
+    <br/>
+    <label for="publishDate">Publish Date</label>
+    <input type="date" class="input" [(ngModel)]="publishDate" id="publishDate" placeholder="Set Publish Date">
+    <br/>
+    <label for="departmentSelect">Add Departments</label>
+    <select class="input" [(ngModel)]="selectedDepartment" id="departmentSelect">
+      <option value="0">Select Department</option>
+      <option *ngFor="let department of departments" [value]="department.id">{{ department.name }}</option>
+    </select>
+    <br/>
+    <label for="courseSelect">Add Courses</label>
+    <select class="input" [(ngModel)]="selectedCourse" id="courseSelect">
+      <option value="0">Select Course</option>
+      <option *ngFor="let course of courses" [value]="course.id">{{ course.course_name }}</option>
+    </select>
+    <br/>
+    <label for="description">Announcement Description</label>
+    <textarea style="height: 300px;" class="input" [(ngModel)]="description" id="description" placeholder="Describe announcement details . . ."></textarea>
+    <br/>
+    <button (click)="addAnnouncement()" id="addbutton"><b>Add Announcements</b></button>
+  </div>
+</div>

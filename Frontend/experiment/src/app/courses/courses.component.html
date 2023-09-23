@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div id="maindiv">
+    <div style="display: flex; flex-direction: row;">
+        <div>
+            <img src="https://cloud.solix.com/wp-content/themes/vantage/images/right-to-be-Informed.png" alt="">
+        </div>
+        <div>
+            <br/>
+            <h1 style="color: orange;">Our Courses</h1>
+            <p>Discover a world of knowledge with our diverse range of courses designed to ignite your curiosity and fuel your passion for learning. Whether you're a student looking to enhance your skills, a professional seeking to stay ahead in your career, or simply someone with a thirst for knowledge, our platform offers a comprehensive selection of courses across various subjects. From expert-led lectures to hands-on projects, our courses are thoughtfully crafted to provide you with a rich and engaging learning experience. Join us on a journey of discovery, skill-building, and personal growth as you unlock new opportunities and shape your future.</p>
+        </div>
+    </div>
+    
+    <br/>
+    <br/>
+    <div id="contenttwocontent">
+        <div *ngFor="let course of courses">
+            <!-- Generate a card for each course -->
+            <div class="card">
+                <img style="width: 60%;" src="../../assets/Image/Brain_Link__1_-removebg-preview.png" alt="">
+              <h2 style="color: rgba(12, 125, 218, 0.756);">{{ course.course_name }}</h2>
+              <p>{{ course.description }}</p>
+              <!-- Add more course details here -->
+              <button (click)="redirectToEnrollment()"><b>Apply Now</b></button>
+            </div> 
+    </div>
+    </div>
+</div>

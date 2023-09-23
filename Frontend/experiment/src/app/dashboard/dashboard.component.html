@@ -1,0 +1,61 @@
+<app-navbar></app-navbar>
+
+    <div id="maincontainer">
+        
+        <div id="content">
+            <div id="details">
+                <div >
+                    <div id="head">BRAIN LINK </div> 
+                    <p style="display: block; font-size: 17px;">Brain link is a comprehensive and dynamic digital environment designed to facilitate the process of learning and knowledge dissemination. It serves as a virtual space where students, educators, and institutions come together to access, create, and share educational content. It offer a diverse range of tools and resources that cater to learners of all ages, backgrounds, and interests. These platforms have become an integral part of modern education, offering numerous benefits to students, educators, and institutions.</p>
+                    <br/>
+                    <button style="padding: 1.5% 4%; border-radius: 18px; background-color: rgba(12, 125, 218, 0.756); color: white; font-size: 17px;">Learn More</button>
+                </div> 
+            </div>
+            <div>
+                <img src="../../assets/Image/dashboard.png" alt="">
+            </div>
+        </div>
+        <div class="contenttwo">
+            <h1 id="head">Launch Your <span style="color: orange;" class="double-underline">Career In Tech</span> </h1>
+            <br/>
+            <br/>
+            <br/>
+            <div class="contentthree">
+                <div id="firstdiv">
+                    <img src="../../assets/Image/dashtwo.jpeg" alt="">
+                </div>
+                <div id="seconddiv">
+                    <div class="shadow"><h2>Career Launchpad</h2></div>
+                    <div><img style="width: 60px;" src="https://cdn-icons-png.flaticon.com/512/10110/10110108.png" alt=""></div>
+                    <div class="shadow"><h2>Industry Readiness</h2></div>
+                    <div><img style="width: 50px;" src="https://cdn-icons-png.flaticon.com/512/10110/10110108.png" alt=""></div>
+                    <div class="shadow"><h2>Practice Based</h2></div>
+                    <div><img style="width: 40px;" src="https://cdn-icons-png.flaticon.com/512/10110/10110108.png" alt=""></div>
+                    <div class="shadow"><h2>Holistic Development</h2></div>
+                </div>
+            </div>
+
+        </div>
+        <br/>
+        <br/>
+        <div class="contenttwo">
+            <br/>
+            <h1>Course Enrollment: Your Path to Knowledge</h1>
+            <br/>
+            <br/>
+            <br/>
+            <div id="contenttwocontent">
+                <div *ngFor="let course of courses">
+                    <!-- Generate a card for each course -->
+                    <div class="card">
+                        <img style="width: 60%;" src="../../assets/Image/Brain_Link__1_-removebg-preview.png" alt="">
+                      <h2>{{ course.course_name }}</h2>
+                      <p>{{ course.description }}</p>
+                      <!-- Add more course details here -->
+                    </div> 
+            </div>
+        </div>
+       
+    </div>
+
+

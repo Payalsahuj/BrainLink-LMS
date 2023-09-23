@@ -1,0 +1,12 @@
+#maindiv{
+    margin-top: 8%; 
+}
+#container{
+    width: 90%;
+    margin: auto;
+}
+#card{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 3%;
+    border-radius: 10px;
+}

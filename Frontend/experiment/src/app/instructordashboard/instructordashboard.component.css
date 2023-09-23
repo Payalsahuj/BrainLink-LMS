@@ -1,0 +1,9 @@
+#maincontainer{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgba(12, 125, 218, 0.756);
+    margin-top: 5%;
+}

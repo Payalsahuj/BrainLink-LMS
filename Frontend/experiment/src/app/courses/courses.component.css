@@ -1,0 +1,45 @@
+#maindiv{
+    width: 85%;
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contenttwocontent{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+ 
+    
+    gap: 1%;
+}
+.shadow{
+    border-radius: 15px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+   
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 5%;
+    
+   
+}
+.card button{
+    padding: 4% 0%;
+    background-color: rgba(12, 125, 218, 0.756);
+    color: white;
+    border: 2px solid rgba(12, 125, 218, 0.756);
+}
+.card button:hover{
+    cursor: pointer;
+}
+.card p{
+    display: block;
+    text-align: justify;
+    color: black;
+    
+    
+}

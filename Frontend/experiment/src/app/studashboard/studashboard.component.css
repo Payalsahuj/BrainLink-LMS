@@ -1,0 +1,8 @@
+#maincontainer{
+    
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgba(12, 125, 218, 0.756);
+}

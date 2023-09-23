@@ -1,0 +1,47 @@
+<div id="container">
+    <div id="register">
+      <h2>Register as Instructor . .</h2>
+      <form [formGroup]="instructorForm" (ngSubmit)="onSubmit()">
+        <div class="input">
+          <label>Username</label>
+          <input type="text" formControlName="name" required placeholder="Enter username">
+        </div>
+        <br/>
+        <div class="input">
+          <label>Email</label>
+          <input type="email" formControlName="email" required placeholder="Enter Email Account">
+        </div>
+        <br/>
+        <div class="input">
+          <label>Contact No.</label>
+          <input type="number" formControlName="contact_number" placeholder="Add Contact Number">
+        </div>
+        <br/>
+        <div class="input">
+          <label>Date of Birth</label>
+          <input type="date" formControlName="dob">
+        </div>
+        <br/>
+        <div class="input">
+          <label>Department</label>
+          <select formControlName="department">
+            <option value="">Select Department</option>
+            <option *ngFor="let department of departments" [value]="department.id">{{ department.name }}</option>
+          </select>
+        </div>
+        <br/>
+        <div class="input">
+          <label>Gender</label>
+          <select formControlName="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+          </select>
+        </div>
+        <br/>
+        <div class="input">
+          <button type="submit"><b>Register Here</b></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

@@ -1,0 +1,20 @@
+
+<app-stunavbar></app-stunavbar>
+<div id="maindiv">
+
+    <div id="assignment-details" class="container">
+        <h2 style="color: orange;">{{ assignmentDetails.title }}</h2>
+        <div *ngFor="let paragraph of descriptionParagraphs">
+            <p>{{ paragraph }}</p>
+          </div>
+        <p ><strong>Due Date:</strong> {{ assignmentDetails.due_date }}</p>
+        <p><b>Submitted data: </b> <span style="color: blue;"> {{ assignmentDetails.assignmentsub}} </span></p>
+        <br/>
+        <div style="display: flex; width: 100%; flex-direction: column; justify-content: center; align-items: center;">
+            <input [(ngModel)]="submissionLink"  type="text" style="width: 70%; padding: 1% 1%;" placeholder="Submit the Github Link . . .">
+            <br/>
+            <button id="button"  (click)="submitAssignment()">Submit</button>
+        </div>
+        <!-- Add more assignment details here as needed -->
+    </div>
+</div>
